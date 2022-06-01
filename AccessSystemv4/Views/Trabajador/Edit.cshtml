@@ -1,0 +1,54 @@
+﻿@model AccessSystemv4.Models.Trabajador
+@{
+    ViewData["Title"] = "Editar Trabajador";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Editar Trabajador</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" asp-action="Edit">
+
+                <input type="hidden" asp-for="Id"/>
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Nombre" class="control-label"></label>
+                    <input asp-for="Nombre" class="form-control"/>
+                    <span asp-validation-for="Nombre" class="text-danfer"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Apellido" class="control-label"></label>
+                    <input asp-for="Apellido" class="form-control"/>
+                    <span asp-validation-for="Apellido" class="text-danfer"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cargo" class="control-label"></label>
+                    <input asp-for="Cargo" class="form-control"/>
+                    <span asp-validation-for="Cargo" class="text-danfer"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GerenciaId" class="control-label"></label>
+                    <input asp-for="GerenciaId" class="form-control"/>
+                    <span asp-validation-for="GerenciaId" class="text-danfer"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Editar Trabajador" class="btn-primary btn-primary"/>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @{<partial name="_ValidationScriptsPartial" />}
+}
+
