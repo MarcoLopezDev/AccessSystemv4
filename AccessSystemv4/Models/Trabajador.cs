@@ -46,7 +46,7 @@ namespace AccessSystemv4.Models
 
         [ForeignKey("FK_Supervisor")]
         [Required(ErrorMessage = "Se debe ingresar el supervisor del trabajador")]
-        [Display(Name = "SupervisorId")]
-        public Trabajador SupervisorId { get; set; }
+        [Display(Name = "GerenciaId")]
+        public Trabajador GerenciaId { get; set; }
     }
 }
